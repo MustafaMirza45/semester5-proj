@@ -36,3 +36,140 @@
     transform: rotate(360deg);
   }
 }
+
+
+.row-header{
+  margin:0px auto;
+  padding:0px auto;
+}
+
+.row-content {
+  margin:0px auto;
+  padding: 50px 0px 50px 0px;
+  min-height:400px;
+}
+
+.footer{
+  clear: both;
+  background-color: floralwhite;
+  margin:0px auto;
+  padding: 20px 0px 20px 0px;
+}
+.jumbotron {
+  padding:70px 30px 70px 30px;
+  margin:0px auto;
+  color: darkgray;
+  background-color: transparent;
+  text-align: center;
+  align-content: center;
+
+}
+
+address{
+  font-size:100%;
+  margin:0px;
+  color:#0f0f0f;
+}
+
+
+a {
+  color: #0f0f0f;
+}
+a:link {
+  color:black;
+}
+a:visited {
+  color:black;
+}
+a:hover {
+  color:moccasin;
+}
+.text{
+  font-size: 300%;
+}
+.textc{
+color: gray    ;
+outline-color: black;
+outline-width: 3px;
+}
+.bord{
+  border-bottom: 1px solid black
+}
+.navbar{
+color: azure;
+}
+.center{
+  text-align: center;
+}
+.padd1{
+padding-bottom: 40px;
+}
+
+.example-appear {
+  opacity: 0.04;
+}
+.example-appear.example-appear-active {
+  opacity: 2;
+  transition: opacity 3s ease-in-out;
+}
+.example-leave {
+  opacity: 1;
+}
+.example-leave.example-leave-active {
+  opacity: 0.04;
+  transition: opacity 1s ease-in;
+}
+.example-enter{
+   opacity:1;
+}
+.example-enter.example-enter-active{
+  opacity:2;
+  transition: opacity 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.cards{
+  border-radius:  100px 15px 100px 15px;
+ 
+}.card-color{
+  background-color: rgb(37, 13, 3);
+  border-top-left-radius: 200px;
+  border-bottom-right-radius:200px ;
+}
+.shadows{
+  box-shadow: 5px 5px grey ;
+}
+.cards2{
+  border-radius:  100px 100px 100px 100px;
+  box-shadow: 10px 10px gray ;
+}
+.navr{
+  border-radius:  50px 50px 50px 50px;
+}
+.tfont{
+  font-family: "Courier New", Courier, monospace;
+  font-style: oblique;
+}
+
+.page-enter {
+  opacity: 0.01;
+  transform: translateX(-100%);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  
+  transition-duration: 1s;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.page-exit-active {
+  opacity: 0.01;
+  transform: translateX(100%);
+  transition: all 1s ease-out;
+}
