@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Footer (props){
     //<li><Link to="/contact">Contact</Link></li> link to contactus
     return(
-        <div className="footer  fixed-bottom">
+        <div className="footer ">
             <div className="container">
                 <div className="row justify-content-center">             
                     <div className="col-4 offset-1 col-sm-2">
