@@ -18,6 +18,9 @@ export const Managers =(state = {
 
             return {...state, isLoading: true, errMess: action.payload, managers: []}
 
+        case ActionTypes.SEND_MANAGER:
+            
+            return state;
 
         default:
             return state;

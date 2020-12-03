@@ -4,17 +4,17 @@ const baseUrl='http://localhost:3003/'
 
 
 
-export const fetchManagers = () => (dispatch) => {
+export const fetchManagers = (a) => (dispatch) => {
 
     dispatch(managersLoading(true));
 
-    return fetch(baseUrl + 'manager')
+    return fetch(baseUrl + 'manager/'+ a )
         .then(response =>{
             if(response.ok){
                 console.log("response ok");
                 return response;
             }else{
-                var error =new Error('Error '+ response.status + ': ' + response.statusText);
+                var error = new Error('Error '+ response.status + ': ' + response.statusText);
                 console.log('Error '+ response.status + ': ' + response.statusText);
                 error.response=response;
                 throw error;
@@ -49,11 +49,11 @@ export const addmanager = (managers) =>
 };
 
 
-export const fetchRestaurant = () => (dispatch) => {
+export const fetchRestaurant = (a) => (dispatch) => {
 
     dispatch(restaurantLoading(true));
 
-    return fetch(baseUrl + 'restaurant')
+    return fetch(baseUrl + 'restaurant/'+a)
         .then(response =>{
             if(response.ok){
                 console.log("response ok");
@@ -93,3 +93,34 @@ export const addrestaurant = (restaurant) =>
     );
     
 };
+
+export const sendmanager = (values)=> (dispatch) => {
+   return fetch(baseUrl + "manager",{
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: JSON.stringify(values) // body data type must match "Content-Type" header
+    })
+    .then(response =>{
+        if(response.ok){
+            console.log("response ok");
+            return response;
+        }else{
+            var error =new Error('Error '+ response.status + ': ' + response.statusText);
+            console.log('Error '+ response.status + ': ' + response.statusText);
+            error.response=response;
+            throw error;
+        }
+    },
+    error =>{
+        var errmess= new Error(error.message);
+        throw errmess;
+    })
+    .then(()=> {dispatch(sendman(true))})
+    .catch(error => dispatch(restaurantfailed(error.message)));
+}
+export const sendman= ()=>({
+    type: ActionTypes.SEND_MANAGER
+});

@@ -11,7 +11,7 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <div>
-          <Main />
+          <Main  m={'2'}/>
         </div> 
       </BrowserRouter>
     </Provider>

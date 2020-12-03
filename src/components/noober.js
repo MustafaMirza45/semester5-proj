@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardImg, 
-    CardTitle, CardHeader, Breadcrumb, BreadcrumbItem, CardBody, CardText } from 'reactstrap';
+    CardTitle, CardHeader, Breadcrumb, BreadcrumbItem, CardBody, CardText ,Button} from 'reactstrap';
 function Rendermanagersitem({manager, rest}){
     if(rest){
         
@@ -32,7 +32,6 @@ function Rendermanagersitem({manager, rest}){
         </Card>
     );
 }
-   
 const Noober = (props) =>{// same as making a  menu function
     const noob = props.manager.managers.map((manager) => {
         let restaurant=props.restaurant.restaurants.filter((res)=> res.Manager_ID === manager.Manager_ID);
